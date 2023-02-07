@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+/*Setting all variables*/
+:root{
+    --root-bg-dark-blue: #030512;
+    --light-text-gray: #9195a6;
+    --main-player-bg-blue: #030928;
+    --main-heading-white: white;
+    --list-items-gray:#10152d;
+    --footer-gray:#191821;
+    --para-font-weight: bold;
+    --list-hover-gray:#242738;
+    --main-red:rgba(224,14,61,1);
+}
+
+
+/*For smooth scroll*/
+/* html {
+    scroll-behavior: smooth;
+  } */
+
+
+/*To hide all the scrollables*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--root-bg-dark-blue);
+}
+
+
+/*Header Section*/
+header{
+    margin: 0% 1%;
+    position: sticky;
+    top: 0;
+    color: var(--main-heading-white);
+    height: 15%;
+    width: 100%;
+    background-color: var(--root-bg-dark-blue);
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1% 2rem;
+    z-index: 5;
+    
+}
+
+
+/*left part of header*/
+.left-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+
+/*Logo part*/
+
+.logo{
+    
+    width:60px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.logo span{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+}
+.logo img{
+    width: 100%;
+}
+
+
+
+/*right part of nav*/
+
+
+.right-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.profile{
+    width: 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+.search{
+    background-color: var(--main-player-bg-blue);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1% 2%;
+    align-items: center;
+    display: flex;
+    width: 45%;
+    border-radius: 5px;
+    color: var(--light-text-gray);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+.search input{
+    outline: none;
+    padding-left: 3%;
+    width: 100%;
+    border: none;
+    color: var(--light-text-gray);
+    background-color: var(--main-player-bg-blue);
+    
+}
+
+.bell-icon{
+    font-size: 1.8rem;
+    position: relative;
+    margin: 0% 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    animation: ring 0.2s infinite alternate;
+}
+.bell-icon i{
+    font-size: 0.8em;
+}
+
+
+.bell-icon i:after{
+    content: ' ';
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 2px;
+
+}
+
+/*Animation for bell icon*/
+
+@keyframes ring{
+    0% {transform: rotate(20deg);}
+    25%{transform: rotate(0deg);}
+    50%{transform: rotate(-20deg);}
+    100%{transform: rotate(0deg);}
+  }
+
+
+/*-------------------------End of header----------------------------------------*/
+
+
+/*Common section Heading*/
+
+.section-heading{
+    z-index: 1;
+    margin-right: 10%;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   width: 100%;
+   background-color: var(--root-bg-dark-blue);
+    padding: 0% 2%;
+   flex-wrap: wrap;
+   
+
+}
+.section-heading h2{
+    margin-bottom: 2%;
+    color: var(--main-heading-white);
+    letter-spacing: 0.02rem;
+
+}
+.section-heading p{
+    font-size: 0.8rem;
+    color: var(--light-text-gray);
+    font-weight: var(--para-font-weight);
+}
+.section-heading p:hover{
+    cursor: pointer;
+    color: var(--main-heading-white);
+    
+}
+
+
+
+
+/*---------------Main section--------------------*/
+
+main{
+    height: 100%;
+    width: 100%;
+    padding: 0% 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+   
+}
+
+
+/*left part of the page*/
+.main-container{
+    overflow-y: scroll;
+    width: 68%;
+   
+}
+
+/*main-card section*/
+.main-singer-card{
+    height: 50%;
+    width:100%;
+    background-color: var(--main-player-bg-blue);
+    display: flex;
+}
+
+
+
+/*image part of the main card*/
+.singer-img{
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+    background-image: url(../songs/havana.jpg);
+    background-color: var(--main-player-bg-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-box-shadow: inset 0px -16px 42px 24px #121941; 
+    box-shadow: inset 0px -16px 42px 24px #121941;
+}
+
+
+
+/*Description of the singer in the main card*/
+.singer-descrpition{
+    width: 60%;
+    padding: 1rem 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+   
+}
+
+.singer-descrpition .section-heading{
+    background-color: var(--main-player-bg-blue);
+}
+
+.singer-descrpition .section-heading h2 span{
+    display: block;
+    color: var(--light-text-gray);
+    font-size: 0.8rem;
+}
+
+.singer-info{
+    margin-top: 5%;
+    color: var(--light-text-gray);
+    font-size: 0.7rem;
+    word-spacing: 1px;
+    font-weight: var(--para-font-weight);
+}
+
+/*Play section*/
+
+.play-song{
+   padding: 2% 1%;
+   font-size: 0.85rem;
+   font-weight: 500;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-end;
+}
+
+.follow, .play-button button{
+    padding: 8% 8%;
+    width: 100px;
+    color: var(--main-heading-white);
+    transition: all 0.3s ease;
+}
+
+/*Button styling*/
+.play-button button{
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background: var(--main-red);
+    background: linear-gradient(135deg, rgba(224,14,61,1) 8%, rgba(252,127,101,1) 52%, rgba(255,232,176,1) 99%);
+    position: relative;
+}
+
+.play-button button a{
+    position: relative;
+    z-index: 1;
+    color: var(--main-heading-white);
+    text-decoration: none;
+
+}
+
+
+.play-button button::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-red);
+    transition: all 0.35s;
+    border-radius: 4px;
+    
+}
+.play-button button:hover, .follow:hover  {
+    color: rgba(252,127,101,1);
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button button:hover::after{
+    width: 100%;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+/*all the scrollable list */
+
+.list-scroll{
+
+    height: 50px;
+    width: 100%;
+    background-color:var(--list-items-gray);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.list-scroll:hover{
+    cursor: pointer;
+    background-color: var(--list-hover-gray);
+}
+
+
+/*Styling of the right scrollable part*/
+.top-music-list{
+    padding: 1% 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-text-gray);
+    font-weight: var(--para-font-weight);
+    font-size: 0.7rem;
+    
+}
+
+/*Common text class created for lighter text in the top music list*/
+
+.lighter-text{
+    color: var(--light-text-gray);
+    font-weight: var(--para-font-weight);
+    font-size: 0.7rem;
+}
+
+
+/*the complete photo conatiner*/
+.list-album{
+    width:50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+
+}
+.list-album-img{
+    margin: 0% 4%;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    
+}
+.list-album-img img{
+height: 100%;
+width: 100%;
+transition: all 0.2s ease-in-out;
+
+}
+
+.play-over{
+    background-color: rgb(8, 8, 8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.1s;
+}
+
+
+.play-over i{
+    color: white;
+}
+.list-album-img:hover .play-over{
+    cursor: pointer;
+    opacity: 0.6;
+
+ }
+
+
+
+ .playing i{
+    color: var(--main-red); 
+ }
+
+
+
+/*the list heading is common for all the aside section haeding*/
+
+.list-heading{
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: var(--main-heading-white);
+}
+
+
+.list-actions{
+    width: 20%;
+    font-size: 1rem;
+
+}
+.list-actions i{
+    margin: 0% 8%;
+    transition: all 0.2s ease-in-out;
+}
+.list-actions i:hover{
+    cursor: pointer;
+    color: rgb(244, 61, 94);
+    transform: scale(1.5);
+}
+
+
+
+
+
+/**aside section*/
+aside{
+    height: 100%;
+    width: 30%;
+    position: sticky;
+   
+}
+
+
+/*Both the simliar artists and recently played section has these similar properities*/
+.similar-artists-container, .recently-played-container{
+    width:100%;
+    overflow-y: scroll;
+    margin-bottom: 10%;
+    height: 50%;
+  
+    }
+
+/*similar artist section */
+.similar-artist-list{
+    background-color: var(--root-bg-dark-blue);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    color: var(--light-text-gray);
+}
+/* .similar-artist-list .list-album, .similar-artist-list .list-actions{
+    height: 90%;
+    width: 50%;
+ } */
+
+.similar-album{
+    height: 100%;
+    width:65%;
+}
+ .similar-img {
+    width: 30%;
+    height: 80%;
+ }
+
+
+ .similar-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+ }
+
+ .list-actions p{
+    font-size: 0.7rem;
+ }
+
+
+
+
+/*media queries for similar artist list*/
+ @media screen and (max-width:1250px) {
+    .similar-artist-list{
+        height: 17%;
+    }
+ }
+
+ 
+ @media screen and (max-width:800px) {
+    .similar-artist-list{
+        height: 10%;
+    }
+}
+
+
+/*Recently played*/
+
+/*This is similar to that of the list scroll class so we aplly hat and remove the unesecary duplication of code*/
+
+.recently-played-list{
+    padding-left: 2%;
+    background-color: var(--root-bg-dark-blue);
+}
+
+
+
+/*Footer section begins*/
+
+footer {
+    overflow: hidden;
+    height:13%;
+    background-color: var(--footer-gray);
+    position: sticky;
+    bottom: 0%;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding: 1% 4%;
+    color: #d3d3d3;
+   z-index: 10;
+
+}
+
+
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+    height:100%;
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+    margin: 0% 4%;
+    border-radius: 5px;
+    width: auto;
+    height:60px;
+}
+/* current song image */
+#song-image img {
+    
+	width: 100%;
+	height: 100%;
+    border-radius: 2px;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+    display: flex;
+	height: 100%;
+    align-items: center;
+	margin-left: 10%;
+}
+
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+i{
+    font-size: 1em;
+}
+
+
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+    height: 3px;
+    background-color: #919191;
+}
+
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #c7c8d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+    position: relative;
+}
+
+
+
+
+@keyframes progress {
+    from{
+        width:0%
+    }
+    to{
+        width: 100%;
+    }
+    
+}
+.progress{
+    height: 100%;
+     background: linear-gradient(135deg, rgba(224,14,61,1) 8%, rgba(252,127,101,1) 52%, rgba(255,232,176,1) 99%);
+    animation: progress 10s ease-in infinite;
+    position: relative;
+}
+
+.progress:after{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,232,176,1);
+       
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -3.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+
+
+
+/*media query for extras*/
+
+@media screen and (max-width:700px) {
+    .extras {
+        width:0%;
+        visibility: hidden;
+    }
+    .player{
+        width: 50%;
+    }
+    .active-song-description {
+        width: 50%;
+    }
+    .slider .time{
+        width:0%;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:750px) {
+    .main-container{
+        width: 100%;
+       
+    }
+
+    aside{
+        width:0%;
+        visibility: hidden;
+    }
+}
